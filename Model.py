@@ -1,5 +1,13 @@
+from django.db import models
+
 class Person(models.Model):
-    identification = models.CharField(max_length=200, unique=True)
+    identification = models.CharField(max_length=10, unique=True)
     name = models.CharField(max_length=200)
-    birthdate = models.DateTimeField()
-    level = models.IntegerField()
+    birthdate = models.DateField()
+    level = models.IntegerField(default=0)
+
+    class Meta():
+        ordering = ["-level"]
+
+    def __str__(self):
+        return "{} {} {} {}".format(self.id, self.identification, self.name, self.level)
