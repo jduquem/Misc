@@ -168,6 +168,7 @@ def level_persons(limit):
 
 def daily_update():
     fix_document_length()
+    ap()
     level_persons(1000)
     total_persons = Person.objects.count()
     level_0_persons = Person.objects.filter(level=0).count()

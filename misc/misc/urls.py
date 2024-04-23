@@ -24,6 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-# trm_du()
-# inflation_du()
-# person_du()
+try:
+    trm_du()
+    inflation_du()
+    person_du()
+except:
+    pass
