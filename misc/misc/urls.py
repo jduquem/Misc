@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from miscFunctions.trm import daily_update as trm_du
+from miscFunctions.inflation import daily_update as inflation_du
+from miscFunctions.person import daily_update as person_du
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+# trm_du()
+# inflation_du()
+# person_du()
