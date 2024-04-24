@@ -47,6 +47,7 @@ def data_fill(period=365):
 
         initial_date += timedelta(days=1)
 
-def daily_update():
+def job():
+    print('TRM job')
     data_fill(10)
     

@@ -1,7 +1,8 @@
 from .models import Inflation
 import random
 
-def daily_update():
+def job():
+    print('Inflation job')
     create_inflation()
 
 def calculate_inflation():

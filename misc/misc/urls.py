@@ -16,17 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from miscFunctions.trm import daily_update as trm_du
-from miscFunctions.inflation import daily_update as inflation_du
-from miscFunctions.person import daily_update as person_du
+from miscFunctions.trm import job as trm_job
+from miscFunctions.inflation import job as inflation_job
+from miscFunctions.person import job as person_job
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
 try:
-    trm_du()
-    inflation_du()
-    person_du()
+    trm_job()
+    inflation_job()
+    person_job()
 except:
     pass
