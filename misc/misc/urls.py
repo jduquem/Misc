@@ -15,13 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from miscFunctions.trm import job as trm_job
 from miscFunctions.inflation import job as inflation_job
 from miscFunctions.person import job as person_job
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('miscFunctions.urls'))
 ]
 
 try:
